@@ -4,8 +4,8 @@ from whatsapp_api_client_python.response import Response
 
 
 class Groups:
-    def __init__(self, greenApi) -> None:
-        self.greenApi = greenApi
+    def __init__(self, basicApi) -> None:
+        self.basicApi = basicApi
         
     def addGroupParticipant(self, 
             groupId: str, 
@@ -17,7 +17,7 @@ class Groups:
                 'participantChatId': participantChatId,
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/AddGroupParticipant/{{apiTokenInstance}}',
                 requestBody)
@@ -30,7 +30,7 @@ class Groups:
                 'chatIds': chatIds
             }
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/CreateGroup/{{apiTokenInstance}}',
                 requestBody)
@@ -42,7 +42,7 @@ class Groups:
                 'groupId': groupId
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/GetGroupData/{{apiTokenInstance}}',
                 requestBody)
@@ -54,7 +54,7 @@ class Groups:
                 'groupId': groupId
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/LeaveGroup/{{apiTokenInstance}}',
                 requestBody)
@@ -68,7 +68,7 @@ class Groups:
                 'participantChatId': participantChatId
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/RemoveAdmin/{{apiTokenInstance}}',
                 requestBody)
@@ -83,7 +83,7 @@ class Groups:
                 'participantChatId': participantChatId
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/RemoveGroupParticipant/{{apiTokenInstance}}',
                 requestBody)
@@ -98,7 +98,7 @@ class Groups:
                 'participantChatId': participantChatId
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SetGroupAdmin/{{apiTokenInstance}}',
                 requestBody)
@@ -119,7 +119,7 @@ class Groups:
                 ('file',(file, open(path,'rb'),'image/jpeg'))
             ]
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SetGroupPicture/{{apiTokenInstance}}',
                 requestBody, files)
@@ -134,7 +134,7 @@ class Groups:
                 'groupName': groupName
             }
             
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/UpdateGroupName/{{apiTokenInstance}}',
                 requestBody)

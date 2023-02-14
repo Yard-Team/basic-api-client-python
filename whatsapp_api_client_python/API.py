@@ -15,7 +15,7 @@ from whatsapp_api_client_python.tools.serviceMethods import ServiceMethods
 from whatsapp_api_client_python.tools.webhooks import Webhooks
 
 
-class GreenApi:
+class BasicApi:
     'REST API class'
 
     host: str
@@ -25,7 +25,7 @@ class GreenApi:
     def __init__(self, 
                     idInstance: str, 
                     apiTokenInstance: str,
-                    host: str = 'https://api.green-api.com') -> None:
+                    host: str = 'https://api.api.basis-api.com') -> None:
         self.host = host
         self.idInstance = idInstance
         self.apiTokenInstance = apiTokenInstance

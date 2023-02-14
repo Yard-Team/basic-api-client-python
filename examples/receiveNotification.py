@@ -5,10 +5,10 @@ from whatsapp_api_client_python import API as API
 ID_INSTANCE = '1101000001'
 API_TOKEN_INSTANCE = '3e03ea9ff3324e228ae3dfdf4d48e409bfa1b1ad0b0c46bf8c'
 
-greenAPI = API.GreenApi(ID_INSTANCE, API_TOKEN_INSTANCE)
+basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE)
 
 def main():
-   greenAPI.webhooks.startReceivingNotifications(onEvent)
+   basicAPI.webhooks.startReceivingNotifications(onEvent)
 
 def onEvent(typeWebhook, body):
    if typeWebhook == 'incomingMessageReceived':

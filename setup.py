@@ -10,10 +10,10 @@ setuptools.setup(
     author="Ivan Sadovy",
     author_email="sadiv@bk.ru",
     description="This library helps you easily create a python '\
-        'application to connect the WhatsApp API using service green-api.com",
+        'application to connect the WhatsApp API using service api.basis-api.com",
     long_description=read_me_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/green-api/whatsapp-api-client-python",
+    url="https://github.com/Yard-Team/whatsapp-api-client-python",
     packages=['whatsapp_api_client_python', 'whatsapp_api_client_python.tools'],
     classifiers=[
         "Programming Language :: Python :: 3",

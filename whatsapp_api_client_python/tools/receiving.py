@@ -2,8 +2,8 @@ from whatsapp_api_client_python.response import Response
 
 
 class Receiving:
-    def __init__(self, greenApi) -> None:
-        self.greenApi = greenApi
+    def __init__(self, basicApi) -> None:
+        self.basicApi = basicApi
         
     def downloadFile(self, idMessage: str) -> Response:
         'The method is aimed for downloading incoming and outgoing files. '\
@@ -18,7 +18,7 @@ class Receiving:
             'idMessage': idMessage,
         }
 
-        return self.greenApi.request('POST', 
+        return self.basicApi.request('POST', 
             '{{host}}/waInstance{{idInstance}}'
             '/DownloadFile/{{apiTokenInstance}}',
             requestBody)
@@ -41,7 +41,7 @@ class Receiving:
         'Incoming notifications are stored in the queue for 24 hours. '\
         'Notifications are sent from the queue in FIFO order'
 
-        return self.greenApi.request('GET', 
+        return self.basicApi.request('GET', 
             '{{host}}/waInstance{{idInstance}}'
             '/ReceiveNotification/{{apiTokenInstance}}')
 
@@ -58,6 +58,6 @@ class Receiving:
         'Incoming notifications are stored in the queue for 24 hours.'\
         'Notifications are sent from the queue in FIFO order'
 
-        return self.greenApi.request('DELETE', 
+        return self.basicApi.request('DELETE', 
             '{{host}}/waInstance{{idInstance}}'
             '/DeleteNotification/{{apiTokenInstance}}/' + str(receiptId))
