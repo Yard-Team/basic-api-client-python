@@ -25,7 +25,7 @@ class BasicApi:
     def __init__(self, 
                     idInstance: str, 
                     apiTokenInstance: str,
-                    host: str = 'https://api.api.basis-api.com') -> None:
+                    host: str = 'https://api.basis-api.com') -> None:
         self.host = host
         self.idInstance = idInstance
         self.apiTokenInstance = apiTokenInstance
