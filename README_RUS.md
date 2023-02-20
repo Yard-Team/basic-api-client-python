@@ -5,11 +5,11 @@
 
 - [English documentation](README.md)
 
-Python библиотека для интеграции с мессенджером WhatsAPP через API сервиса [api.basis-api.com](https://api.basis-api.com). Чтобы воспользоваться библиотекой нужно получить регистрационный токен и id аккаунта в [личном кабинете](https://console.api.basis-api.com). Есть бесплатный тариф аккаунта разработчика.
+Python библиотека для интеграции с мессенджером WhatsAPP через API сервиса [api.basis-api.com](https://api.basis-api.com). Чтобы воспользоваться библиотекой нужно получить регистрационный токен и id аккаунта в [личном кабинете](https://cabinet.basis-api.com). Есть бесплатный тариф аккаунта разработчика.
 
 ## API
 
-Документация к REST API находится по [ссылке](https://api.basis-api.com/docs/api/). Библиотека является оберткой к REST API, поэтому документация по ссылке выше применима и к самой библиотеке.
+Документация к REST API находится по [ссылке](https://cabinet.basis-api.com/docs/ru/api/). Библиотека является оберткой к REST API, поэтому документация по ссылке выше применима и к самой библиотеке.
 
 ## Установка
 
@@ -19,7 +19,7 @@ pip install whatsapp-api-client-python
 
 ## Авторизация 
 
-Чтобы отправить сообщение или выполнить другой метод Basic-API, аккаунт WhatsApp в приложении телефона должен быть в авторизованном состоянии. Для авторизации аккаунта перейдите в [личный кабинет](https://console.api.basis-api.com) и сканируйте QR-код с использованием приложения WhatsApp.
+Чтобы отправить сообщение или выполнить другой метод Basic-API, аккаунт WhatsApp в приложении телефона должен быть в авторизованном состоянии. Для авторизации аккаунта перейдите в [личный кабинет](https://cabinet.basis-api.com) и сканируйте QR-код с использованием приложения WhatsApp.
 
 ## Примеры
 
@@ -86,7 +86,7 @@ if resultCreate.code == 200:
 
 ### Получение входящих сообщений через HTTP API
 
-Общая концепция получения данных в Basic API описана [здесь](https://api.basis-api.com/docs/api/receiving/)
+Общая концепция получения данных в Basic API описана [здесь](https://cabinet.basis-api.com/docs/ru/api/receiving/)
 Для старта получения сообщений через HTTP API требуется выполнить метод библиотеки:
 
 ```python
@@ -99,7 +99,7 @@ onEvent - ваш метод, который должен содержать па
 typeWebhook | тип полученного сообщения (строка)
 body | тело сообщения (json)
 
-Типы и форматы тел сообщений [здесь](https://api.basis-api.com/docs/api/receiving/notifications-format/)
+Типы и форматы тел сообщений [здесь](https://cabinet.basis-api.com/docs/ru/api/receiving/notifications-format/)
 
 Этот метод будет вызываться при получении входящего сообщения. Далее обрабатываете сообщения согласно бизнес-логике вашей системы.
 
@@ -129,7 +129,7 @@ body | тело сообщения (json)
 | `account.setSystemProxy`               | Метод предназначен для установки системного прокси. Нужно используйте метод, когда требуется сбросить пользовательские настройки прокси на системные                                            | [SetSystemProxy.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/account/SetSystemProxy.md)                                 |
 | `groups.addGroupParticipant`           | Метод добавляет участника в групповой чат                                                                                                                                                       | [AddGroupParticipant.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/groups/AddGroupParticipant.md)                        |
 | `groups.createGroup`                   | Метод добавляет участника в групповой чат. ВАЖНО: Если попытаться создать группу с несуществующим номером WhatsApp может заблокировать номер отправителя.                                       | [CreateGroup.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/groups/CreateGroup.md)                                        |
-| `groups.getGroupData`                  | Метод получает данные группового чата                                                                                                                                                           | [GetGroupData.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/account/GetGroupData.md)                                     |
+| `groups.getGroupData`                  | Метод получает данные группового чата                                                                                                                                                           | [GetGroupData.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/groups/GetGroupData.md)                                     |
 | `groups.leaveGroup`                    | Метод производит выход пользователя текущего аккаунта из группового чата                                                                                                                        | [LeaveGroup.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/groups/LeaveGroup.md)                                          |
 | `groups.removeAdmin`                   | Метод лишает участника прав администрирования группового чата                                                                                                                                   | [RemoveAdmin.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/groups/RemoveAdmin.md)                                        |
 | `groups.removeGroupParticipant`        | Метод удаляет участника из группового чата                                                                                                                                                      | [RemoveGroupParticipant.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/groups/RemoveGroupParticipant.md)                  |
@@ -160,16 +160,16 @@ body | тело сообщения (json)
 | `serviceMethods.getContactInfo`        | Метод предназначен для получения информации о контакте                                                                                                                                          | [GetContactInfo.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/GetContactInfo.md)                                 |
 | `serviceMethods.getContacts`           | Метод предназначен для получения списка контактов текущего аккаунта                                                                                                                             | [GetContacts.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/GetContacts.md)                                       |
 | `serviceMethods.setDisappearingChat`   | Метод предназначен для изменения настроек исчезающих сообщений в чатах. Нужно использовать стандартные настройки приложения: 0 (выключено), 86400 (24 часа), 604800 (7 дней), 7776000 (90 дней) | [SetDisappearingChat.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/SetDisappearingChat.md)                       |
-| `serviceMethods.archiveChat`           | Метод архивирует чат. Архивировать можно чаты, в которых есть хотя бы одно входящее сообщение                                                                                                   | [ArchiveChat.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/ArchiveChat.md)                                       |
+| `serviceMethods.archiveChat`           | Метод архивирует чат. Архивировать можно чаты, в которых есть хотя бы одно входящее сообщение                                                                                                   | [ArchiveChat.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/archiveChat.md)                                       |
 | `serviceMethods.deleteMessage`         | Метод удаляет сообщение из чата                                                                                                                                                                 | [DeleteMessage.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/deleteMessage.md)                                   |
-| `serviceMethods.unarchiveChat`         | Метод разархивирует чат                                                                                                                                                                         | [UnarchiveChat.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/UnarchiveChat.md)                                   |
+| `serviceMethods.unarchiveChat`         | Метод разархивирует чат                                                                                                                                                                         | [UnarchiveChat.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/unarchiveChat.md)                                   |
 | `serviceMethods.setDisappearingChat`   | Метод предназначен для изменения настроек исчезающих сообщений в чатах                                                                                                                          | [SetDisappearingChat.md](https://github.com/Yard-Team/docs/blob/master/ru/docs/api/service/SetDisappearingChat.md)                       |
 | `webhooks.startReceivingNotifications` | Метод предназначен для запуска получения вебхуков                                                                                                                                               | <библиотечный метод>                                                                                                                     |
 | `webhooks.stopReceivingNotifications`  | Метод предназначен для остановки получения вебхуков                                                                                                                                             | <библиотечный метод>                                                                                                                     |
 
 ## Документация по методам сервиса
 
-[https://api.basis-api.com/docs/api/](https://api.basis-api.com/docs/api/)
+[https://cabinet.basis-api.com/docs/ru/api/](https://cabinet.basis-api.com/docs/ru/api/)
 
 ## Сторонние продукты
 
