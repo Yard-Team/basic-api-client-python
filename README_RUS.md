@@ -1,7 +1,7 @@
-﻿# whatsapp-api-client-python
+﻿# basic-api-client-python
 
-[![Python application](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-app.yml/badge.svg)](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-app.yml)
-[![Upload Python Package](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-publish.yml)
+[![Python application](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-app.yml/badge.svg)](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-app.yml)
+[![Upload Python Package](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-publish.yml)
 
 - [English documentation](README.md)
 
@@ -14,7 +14,7 @@ Python библиотека для интеграции с мессенджер�
 ## Установка
 
 ```shell
-pip install whatsapp-api-client-python
+pip install basic-api-client-python
 ```
 
 ## Авторизация 
@@ -35,7 +35,7 @@ basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE)
 result = basicAPI.sending.sendMessage('79001234567@g.us', 'Message text')
 ```
 
-Ссылка на пример: [sendTextMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendTextMessage.py)
+Ссылка на пример: [sendTextMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendTextMessage.py)
 
 Обратите внимание, что ключи можно получать из переменных среды:
 ```python
@@ -53,7 +53,7 @@ result = basicAPI.sending.sendFileByUrl('120363025955348359@g.us',
         'googlelogo_color_272x92dp.png', 'Google logo')
 ```
 
-Ссылка на пример: [sendPictureByLink.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
+Ссылка на пример: [sendPictureByLink.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByLink.py)
 
 ### Отправка картинки загрузкой с диска
 
@@ -63,7 +63,7 @@ result = basicAPI.sending.sendFileByUpload('120363025955348359@g.us',
         'PicFromDisk.png', 'Picture from disk')
 ```
 
-Ссылка на пример: [sendPictureByUpload.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
+Ссылка на пример: [sendPictureByUpload.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByUpload.py)
 
 ### Создание группы и отправка сообщения в эту группу
 
@@ -82,7 +82,7 @@ if resultCreate.code == 200:
 ВАЖНО: Если попытаться создать группу с несуществующим номером WhatsApp 
 может заблокировать номер отправителя. Номер в примере не существует.
 
-Ссылка на пример: [createGroupAndSendMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
+Ссылка на пример: [createGroupAndSendMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
 
 ### Получение входящих сообщений через HTTP API
 
@@ -107,11 +107,11 @@ body | тело сообщения (json)
 
 Описание |  Модуль
 ----- | ----- 
-Пример отправки текста | [sendTextMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendTextMessage.py)
-Пример отправки картинки по URL | [sendPictureByLink.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
-Пример отправки картинки загрузкой с диска | [sendPictureByUpload.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
-Пример создание группы и отправка сообщения в группу | [createGroupAndSendMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
-Пример получения входящих уведомлений | [receiveNotification.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/receiveNotification.py)
+Пример отправки текста | [sendTextMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendTextMessage.py)
+Пример отправки картинки по URL | [sendPictureByLink.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByLink.py)
+Пример отправки картинки загрузкой с диска | [sendPictureByUpload.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByUpload.py)
+Пример создание группы и отправка сообщения в группу | [createGroupAndSendMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
+Пример получения входящих уведомлений | [receiveNotification.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/receiveNotification.py)
 
 
 ## Полный список методов библиотеки

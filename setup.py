@@ -13,7 +13,7 @@ setuptools.setup(
         'application to connect the WhatsApp API using service api.basis-api.com",
     long_description=read_me_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Yard-Team/whatsapp-api-client-python",
+    url="https://github.com/Yard-Team/basic-api-client-python",
     packages=['basic_api_client_python', 'basic_api_client_python.tools'],
     classifiers=[
         "Programming Language :: Python :: 3",

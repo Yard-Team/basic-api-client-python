@@ -1,7 +1,7 @@
-﻿# whatsapp-api-client-python
+﻿# basic-api-client-python
 
-[![Python application](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-app.yml/badge.svg)](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-app.yml)
-[![Upload Python Package](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Yard-Team/whatsapp-api-client-python/actions/workflows/python-publish.yml)
+[![Python application](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-app.yml/badge.svg)](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-app.yml)
+[![Upload Python Package](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Yard-Team/basic-api-client-python/actions/workflows/python-publish.yml)
 
 - [Документация на русском языке](README_RUS.md)
 
@@ -14,13 +14,13 @@ You can find REST API documentation by [url](https://cabinet.basis-api.com/docs/
 ## Installation
 
 ```shell
-pip install whatsapp-api-client-python
+pip install basic-api-client-python
 ```
 
 ## Import 
 
 ```
-from whatsapp_api_client_python import API
+from basic_api_client_python import API
 ```
 ## Authorization
 
@@ -40,7 +40,7 @@ basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE)
 result = basicAPI.sending.sendMessage('79001234567@g.us', 'Message text')
 ```
 
-Example url: [sendTextMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendTextMessage.py)
+Example url: [sendTextMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendTextMessage.py)
 
 Please note that keys can be obtained from environment variables:
 ```python
@@ -58,7 +58,7 @@ result = basicAPI.sending.sendFileByUrl('120363025955348359@g.us',
         'googlelogo_color_272x92dp.png', 'Google logo')
 ```
 
-Example url: [sendPictureByLink.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
+Example url: [sendPictureByLink.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByLink.py)
 
 ### Sending an image by uploading from the disk
 
@@ -68,7 +68,7 @@ result = basicAPI.sending.sendFileByUpload('120363025955348359@g.us',
         'PicFromDisk.png', 'Picture from disk')
 ```
 
-Example url: [sendPictureByUpload.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
+Example url: [sendPictureByUpload.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByUpload.py)
 
 ### Group creation and sending a message to the group
 
@@ -87,7 +87,7 @@ if resultCreate.code == 200:
 IMPORTANT: If one tries to create a group with a non-existent number, WhatsApp 
 may block the sender's number. The number in the example is non-existent.
 
-Example url: [createGroupAndSendMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
+Example url: [createGroupAndSendMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
 
 ### Receive incoming messages by HTTP API
 
@@ -112,11 +112,11 @@ This method will be called when an incoming message is received. Next, process m
 
 Description |  Module
 ----- | ----- 
-Example of sending text | [sendTextMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendTextMessage.py)
-Example of sending a picture by URL | [sendPictureByLink.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
-Example of sending a picture by uploading from the disk | [sendPictureByUpload.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
-Example of a group creation and sending a message to the group | [createGroupAndSendMessage.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
-Example of incoming webhooks receiving | [receiveNotification.py](https://github.com/Yard-Team/whatsapp-api-client-python/blob/master/examples/receiveNotification.py)
+Example of sending text | [sendTextMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendTextMessage.py)
+Example of sending a picture by URL | [sendPictureByLink.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByLink.py)
+Example of sending a picture by uploading from the disk | [sendPictureByUpload.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/sendPictureByUpload.py)
+Example of a group creation and sending a message to the group | [createGroupAndSendMessage.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
+Example of incoming webhooks receiving | [receiveNotification.py](https://github.com/Yard-Team/basic-api-client-python/blob/master/examples/receiveNotification.py)
 
 
 ## The full list of the library methods

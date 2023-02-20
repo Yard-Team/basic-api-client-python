@@ -1,6 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./whatsapp_api_client_python",
+        "./basic_api_client_python",
         "./src"
     ]
 }
