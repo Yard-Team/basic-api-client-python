@@ -4,7 +4,7 @@ with open("README.md") as file:
     read_me_description = file.read()
 
 setuptools.setup(
-    name="whatsapp-api-client-python",
+    name="basic-api-client-python",
     version="0.0.31",
     install_requires=['requests'],
     author="Ivan Sadovy",
@@ -14,7 +14,7 @@ setuptools.setup(
     long_description=read_me_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Yard-Team/whatsapp-api-client-python",
-    packages=['whatsapp_api_client_python', 'whatsapp_api_client_python.tools'],
+    packages=['basic_api_client_python', 'basic_api_client_python.tools'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

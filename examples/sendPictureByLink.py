@@ -1,4 +1,4 @@
-from whatsapp_api_client_python import API as API
+from basic_api_client_python import API as API
 
 ID_INSTANCE = '1101000001'
 API_TOKEN_INSTANCE = '3e03ea9ff3324e228ae3dfdf4d48e409bfa1b1ad0b0c46bf8c'
