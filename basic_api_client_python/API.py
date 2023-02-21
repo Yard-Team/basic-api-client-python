@@ -1,21 +1,21 @@
 from array import array
 import requests
 import json
-from whatsapp_api_client_python.response import Response
+from basic_api_client_python.response import Response
 
-from whatsapp_api_client_python.tools.account import Account
-from whatsapp_api_client_python.tools.device import Device
-from whatsapp_api_client_python.tools.groups import Groups
-from whatsapp_api_client_python.tools.journals import Journals
-from whatsapp_api_client_python.tools.marking import Marking
-from whatsapp_api_client_python.tools.queues import Queues
-from whatsapp_api_client_python.tools.receiving import Receiving
-from whatsapp_api_client_python.tools.sending import Sending
-from whatsapp_api_client_python.tools.serviceMethods import ServiceMethods
-from whatsapp_api_client_python.tools.webhooks import Webhooks
+from basic_api_client_python.tools.account import Account
+from basic_api_client_python.tools.device import Device
+from basic_api_client_python.tools.groups import Groups
+from basic_api_client_python.tools.journals import Journals
+from basic_api_client_python.tools.marking import Marking
+from basic_api_client_python.tools.queues import Queues
+from basic_api_client_python.tools.receiving import Receiving
+from basic_api_client_python.tools.sending import Sending
+from basic_api_client_python.tools.serviceMethods import ServiceMethods
+from basic_api_client_python.tools.webhooks import Webhooks
 
 
-class GreenApi:
+class BasicApi:
     'REST API class'
 
     host: str
@@ -25,7 +25,7 @@ class GreenApi:
     def __init__(self, 
                     idInstance: str, 
                     apiTokenInstance: str,
-                    host: str = 'https://api.green-api.com') -> None:
+                    host: str = 'https://api.basis-api.com') -> None:
         self.host = host
         self.idInstance = idInstance
         self.apiTokenInstance = apiTokenInstance

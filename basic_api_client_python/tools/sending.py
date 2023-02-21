@@ -1,12 +1,12 @@
 from array import array
 import os.path
 import mimetypes
-from whatsapp_api_client_python.response import Response
+from basic_api_client_python.response import Response
 
 
 class Sending:
-    def __init__(self, greenApi) -> None:
-        self.greenApi = greenApi
+    def __init__(self, basicApi) -> None:
+        self.basicApi = basicApi
         
     def sendButtons(self, chatId: str, message: str, footer: str,
                     buttons: array, quotedMessageId: str = None, 
@@ -31,7 +31,7 @@ class Sending:
             if archiveChat != None:
                 requestBody['archiveChat'] = archiveChat
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendButtons/{{apiTokenInstance}}',
                 requestBody)
@@ -54,7 +54,7 @@ class Sending:
             if quotedMessageId != None:
                 requestBody['quotedMessageId'] = quotedMessageId
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendContact/{{apiTokenInstance}}',
                 requestBody)
@@ -95,7 +95,7 @@ class Sending:
             if quotedMessageId != None:
                 requestBody['quotedMessageId'] = quotedMessageId
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendFileByUpload/{{apiTokenInstance}}',
                 requestBody, files = files)
@@ -131,7 +131,7 @@ class Sending:
             if archiveChat != None:
                 requestBody['archiveChat'] = archiveChat
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendFileByUrl/{{apiTokenInstance}}',
                 requestBody)
@@ -155,7 +155,7 @@ class Sending:
             if quotedMessageId != None:
                 requestBody['quotedMessageId'] = quotedMessageId
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendLink/{{apiTokenInstance}}',
                 requestBody)
@@ -192,7 +192,7 @@ class Sending:
             if archiveChat != None:
                 requestBody['archiveChat'] = archiveChat
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendListMessage/{{apiTokenInstance}}',
                 requestBody)
@@ -220,7 +220,7 @@ class Sending:
             if quotedMessageId != None:
                 requestBody['quotedMessageId'] = quotedMessageId 
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendLocation/{{apiTokenInstance}}',
                 requestBody)
@@ -245,7 +245,7 @@ class Sending:
             if archiveChat != None:
                 requestBody['archiveChat'] = archiveChat 
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendMessage/{{apiTokenInstance}}',
                 requestBody)
@@ -277,7 +277,7 @@ class Sending:
             if archiveChat != None:
                 requestBody['archiveChat'] = archiveChat 
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/SendTemplateButtons/{{apiTokenInstance}}',
                 requestBody)
@@ -298,7 +298,7 @@ class Sending:
                 'messages': messages,
             }
 
-            return self.greenApi.request('POST',
+            return self.basicApi.request('POST',
                                          '{{host}}/waInstance{{idInstance}}'
                                          '/ForwardMessages/{{apiTokenInstance}}',
                                          requestBody)

@@ -1,9 +1,9 @@
-from whatsapp_api_client_python.response import Response
+from basic_api_client_python.response import Response
 
 
 class Marking:
-    def __init__(self, greenApi) -> None:
-        self.greenApi = greenApi
+    def __init__(self, basicApi) -> None:
+        self.basicApi = basicApi
         
     def readChat(self, chatId: str, idMessage: str) -> Response:
             'The method returns the chat message history.'
@@ -13,7 +13,7 @@ class Marking:
                 'idMessage': idMessage,
             }
 
-            return self.greenApi.request('POST', 
+            return self.basicApi.request('POST', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/ReadChat/{{apiTokenInstance}}',
                 requestBody)

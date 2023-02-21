@@ -1,14 +1,14 @@
-from whatsapp_api_client_python.response import Response
+from basic_api_client_python.response import Response
 
 
 class Queues:
-    def __init__(self, greenApi) -> None:
-        self.greenApi = greenApi
+    def __init__(self, basicApi) -> None:
+        self.basicApi = basicApi
         
     def clearMessagesQueue(self) -> Response:
             'The method is aimed for clearing the queue of messages to be sent.'
 
-            return self.greenApi.request('GET', 
+            return self.basicApi.request('GET', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/ClearMessagesQueue/{{apiTokenInstance}}')
 
@@ -17,6 +17,6 @@ class Queues:
             'to be sent. Messages sending rate is managed by Messages sending '\
             'delay parameter.'
 
-            return self.greenApi.request('GET', 
+            return self.basicApi.request('GET', 
                 '{{host}}/waInstance{{idInstance}}'
                 '/ShowMessagesQueue/{{apiTokenInstance}}')
