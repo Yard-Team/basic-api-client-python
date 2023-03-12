@@ -26,7 +26,7 @@ pip install basic-api-client-python
 ### Как инициализировать объект
 
 ```python
-basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE)
+basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE, API_HOST)
 ```
 
 ### Отправка текстового сообщения на номер WhatsApp

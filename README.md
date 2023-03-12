@@ -31,7 +31,7 @@ To send a message or to exacute some other Basic-API method, you have to have th
 ### How to initialize an object
 
 ```python
-basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE)
+basicAPI = API.BasicApi(ID_INSTANCE, API_TOKEN_INSTANCE, API_HOST)
 ```
 
 ### Sending a text message to a WhatsApp number
